@@ -1,0 +1,99 @@
+{{define "article/write.html"}}
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+  <head>
+		{{template "public/head.html"}}
+  </head>
+  
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper" id="page">
+
+		{{template "public/main-header.html"}}
+      <!-- Left side column. contains the logo and sidebar -->
+				
+		{{template "public/main-sidebar.html"}}
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+
+          <section class="content-header">
+              <h1>
+                  全部文章
+                  <small>在这里安静地写作吧</small>
+              </h1>
+              <ol class="breadcrumb">
+                  <li><a href="javascript:void(0)"><i class="fa fa-dashboard"></i> 用户管理</a></li>
+                  <li class="active">全部用户</li>
+              </ol>
+          </section>
+
+          <!-- Main content -->
+          <section class="content">
+
+
+              <div class="row">
+                  <div class="col-xs-3">
+                     
+                    <div class="box box-primary">
+                        <div class="box-body">
+                                <ul class="products-list product-list-in-box" v-if="articles.length>0">
+                                        <li class="item" v-for="item in articles" >
+                                          <div class="product-img">
+                                            <img :src="item.cover" alt="Product Image">
+                                          </div>
+                                          <div class="product-info">
+                                            <a href="javascript::;" class="product-title" v-text="item.title"></a><span class="label label-warning pull-right" v-text="item.nliulan">$1800</span>
+                                            <span class="product-description" v-text="item.memo">
+                                              
+                                            </span>
+                                          </div>
+                                        </li><!-- /.item -->
+                                        
+                                      </ul>
+          
+          
+                            
+                          </div>
+                     
+
+                  </div>
+
+                      <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+
+                  <div class="col-xs-9">
+                    <div class="box">
+
+
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                           content
+                               
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+              </div>
+              <!-- /.col -->
+
+            <!-- /.row -->
+            </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+		
+     	{{template "public/footer.html"}}
+    </div><!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+		{{template "public/foot.html"}}
+    {{template "setting/addmod.html"}}
+    {{template "setting/addres.html"}}
+
+  </body>
+</html>
+<script src="{{ctxpath}}/asset/js/article/write.js?v={{version}}"></script>
+{{end}}

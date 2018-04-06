@@ -165,4 +165,4 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'keytoany@qq.com', 'd060812a3a1af12643a74a4d3b6d492d', '', '2018-02-23 11:32:32', 'winlion', '', '1', 'keytoany@qq.com', '1');
+INSERT INTO `user` VALUES ('1', 'admin@qq.com', 'e10adc3949ba59abbe56e057f20f883e', '', '2018-02-23 11:32:32', 'winlion', '', '1', 'admin@qq.com', '1');
